@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dou Design"
+  short_description: "Build consistent interfaces with Dou Design"
+  default_prompt: "Apply Dou Design to the requested interface. Read the foundations, component patterns, screen blueprint when relevant, and design tokens before building. Preserve the system's exact palette, typography, spacing, shape, and interaction language across frameworks."

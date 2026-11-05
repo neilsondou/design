@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Dou Design is a cross-platform interface design system covering color, typography, layout, components, patterns, and tokens.">
+  <title>Dou Design</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script>try{const t=localStorage.getItem('dou-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4 8.5 8.5 0 1 0 20 15.2Z"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 20h16"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11H3V8a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="4"/></symbol>
+      <symbol id="i-sunrise" viewBox="0 0 24 24"><path d="M4 18h16M6 14a6 6 0 0 1 12 0M12 3v3M4 8l2 2m12 0 2-2M3 14h2m14 0h2"/></symbol>
+      <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M7 3v8m-3-8v5a3 3 0 0 0 6 0V3M7 11v10M16 3v18m0-18c3 2 4 5 4 8h-4"/></symbol>
+      <symbol id="i-moonstar" viewBox="0 0 24 24"><path d="M19 15A7 7 0 0 1 9 5a7 7 0 1 0 10 10Z"/><path d="m17 3 .5 1.5L19 5l-1.5.5L17 7l-.5-1.5L15 5l1.5-.5L17 3Z"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 16 .7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7L19 16Z"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 3h6l1 4H8l1-4Zm-3 4 1 14h10l1-14M10 11v6m4-6v6"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8M5 10v11h14V10M9 21v-7h6v7"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4m8-4v4M3 10h18"/></symbol>
+      <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-9M15 6h6v6"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button class="icon-button mobile-menu" id="menu-button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+        <svg><use href="#i-menu"/></svg>
+      </button>
+      <a class="brand" href="#overview">Dou Design</a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#overview" class="active">Overview</a>
+        <a href="#foundations">Foundations</a>
+        <a href="#components">Components</a>
+        <a href="#patterns">Patterns</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-trigger" id="search-button" aria-label="Search the guidelines">
+          <svg><use href="#i-search"/></svg><span>Search</span><kbd>/</kbd>
+        </button>
+        <button class="icon-button" id="theme-toggle" aria-label="Switch to light theme" title="Switch theme">
+          <svg class="theme-icon-sun"><use href="#i-sun"/></svg>
+          <svg class="theme-icon-moon"><use href="#i-moon"/></svg>
+        </button>
+        <a class="header-download" href="icons/">
+          <span>Icons</span><svg><use href="#i-arrow-up"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <button class="sidebar-scrim" id="sidebar-scrim" aria-label="Close navigation" tabindex="-1"></button>
+
+  <div class="page-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Guideline sections">
+      <div class="sidebar-inner">
+        <nav class="side-nav">
+          <div class="nav-group">
+            <p class="nav-label">Start</p>
+            <a href="#overview">Introduction</a>
+            <a href="#principles">Principles</a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-label">Foundations</p>
+            <a href="#color">Color</a>
+            <a href="#typography">Typography</a>
+            <a href="#layout">Layout &amp; spacing</a>
+            <a href="#shape">Shape &amp; depth</a>
+            <a href="#motion">Motion</a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-label">Components</p>
+            <a href="#buttons">Buttons</a>
+            <a href="#selection">Segmented controls</a>
+            <a href="#switches">Switches &amp; checks</a>
+            <a href="#inputs">Inputs</a>
+            <a href="#search-slider">Search &amp; sliders</a>
+            <a href="#cards">Cards &amp; lists</a>
+            <a href="#badges">Badges &amp; avatars</a>
+            <a href="#progress">Progress &amp; loading</a>
+            <a href="#charts">Data visualization</a>
+            <a href="#tables">Data tables</a>
+            <a href="#feedback">Feedback &amp; overlays</a>
+          </div>
+          <div class="nav-group">
+            <p class="nav-label">Patterns &amp; resources</p>
+            <a href="#navigation">Navigation</a>
+            <a href="#accessibility">Accessibility</a>
+            <a href="#tokens">Design tokens</a>
+          </div>
+        </nav>
+        <div class="sidebar-meta">
+          <span class="status-dot"></span>
+          <span>1.0.2</span>
+          <span class="meta-separator">·</span>
+          <span>Web / Mobile</span>
+        </div>
+      </div>
+    </aside>
+
+    <main id="main">
+      <section class="hero observed-section" id="overview" data-title="Introduction">
+        <div class="hero-copy">
+          <p class="eyebrow">DOU DESIGN</p>
+          <h1><span>Interface</span> <span>design</span> <span>guidelines</span></h1>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#components">Explore components<svg><use href="#i-arrow"/></svg></a>
+            <a class="button button-secondary" href="icons/">Browse icons<svg><use href="#i-grid"/></svg></a>
+            <a class="text-link" href="../tokens/design-tokens.json" download>Download tokens<svg><use href="#i-download"/></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-section observed-section" id="principles" data-title="Principles">
+        <header class="section-header">
+          <p class="section-index">01 / PRINCIPLES</p>
+          <h2>Principles</h2>
+          <p>A page shows the content people need to read and the actions they need to take. Color, spacing, and motion have fixed roles and do not change from page to page.</p>
+        </header>
+        <div class="principle-grid">
+          <article class="principle-card"><span>01</span><h3>Content first</h3><p>Numbers and useful information lead the eye. Decoration appears only when it carries meaning.</p></article>
+          <article class="principle-card"><span>02</span><h3>Consistent order</h3><p>Use the same spacing, alignment, and grouping throughout. The same meaning always gets the same visual treatment.</p></article>
+          <article class="principle-card"><span>03</span><h3>Warm restraint</h3><p>Soft sage green, generous corners, and plain language keep a precise data interface approachable.</p></article>
+        </div>
+        <div class="guideline-pair">
+          <div class="guideline do"><span><svg><use href="#i-check"/></svg>Do</span><p>Build hierarchy with weight, size, and space.</p></div>
+          <div class="guideline dont"><span><svg><use href="#i-close"/></svg>Avoid</span><p>Neon colors, page gradients, glows, and decoration without a purpose.</p></div>
+        </div>
+      </section>
+
+      <section class="doc-section section-group observed-section" id="foundations" data-title="Foundations">
+        <header class="section-header">
+          <p class="section-index">02 / FOUNDATIONS</p>
+          <h2>Foundations</h2>
+          <p>A shared visual grammar keeps the experience consistent across platforms and screen sizes. Every foundation value comes from a semantic token.</p>
+        </header>
+
+        <article class="doc-article observed-section" id="color" data-title="Color">
+          <div class="article-heading"><span>02.1</span><div><h3>Color</h3><p>A black night theme and a warm paper theme share the same semantics. Changing the theme changes surfaces and contrast, not layout.</p></div></div>
+          <div class="theme-palettes">
+            <div class="palette-card night-palette">
+              <div class="palette-heading"><div><span class="palette-dot"></span><strong>Night</strong><small>Dark</small></div><span>Default theme</span></div>
+              <div class="palette-canvas dark-canvas">
+                <div class="palette-sample-card"><span>Today's intake</span><strong>1,248<small>kcal</small></strong><i></i></div>
+              </div>
+              <code>Canvas #000000</code>
+            </div>
+            <div class="palette-card paper-palette">
+              <div class="palette-heading"><div><span class="palette-dot"></span><strong>Paper</strong><small>Light</small></div><span>Light theme</span></div>
+              <div class="palette-canvas light-canvas">
+                <div class="palette-sample-card"><span>Today's intake</span><strong>1,248<small>kcal</small></strong><i></i></div>
+              </div>
+              <code>Canvas #F4EFE5</code>
+            </div>
+          </div>
+          <h4 class="minor-heading">Accent presets</h4>
+          <p class="body-copy preset-intro">A preset replaces the accent only. Text, surfaces, and status colors stay the same. Select one to preview it across the site.</p>
+          <div class="accent-presets" role="group" aria-label="Site accent presets">
+            <button class="accent-preset selected" data-accent="sage" aria-pressed="true"><span><i style="background:#a8bfa8"></i><i style="background:#728e71"></i><i style="background:#c2d6c1"></i></span><strong>Sage</strong><small>Default</small></button>
+            <button class="accent-preset" data-accent="blue" aria-pressed="false"><span><i style="background:#a9b7c9"></i><i style="background:#607e99"></i><i style="background:#c6d2e0"></i></span><strong>Sea blue</strong><small>Cool</small></button>
+            <button class="accent-preset" data-accent="apricot" aria-pressed="false"><span><i style="background:#d9a77a"></i><i style="background:#a56f3e"></i><i style="background:#e8c3a3"></i></span><strong>Apricot</strong><small>Warm</small></button>
+            <button class="accent-preset" data-accent="violet" aria-pressed="false"><span><i style="background:#b9add2"></i><i style="background:#807196"></i><i style="background:#d0c7e2"></i></span><strong>Lavender</strong><small>Soft</small></button>
+            <button class="accent-preset" data-accent="terracotta" aria-pressed="false"><span><i style="background:#d39a8a"></i><i style="background:#a96250"></i><i style="background:#e5b8ac"></i></span><strong>Terracotta</strong><small>Earth</small></button>
+            <button class="accent-preset" data-accent="rose" aria-pressed="false"><span><i style="background:#d5a3b5"></i><i style="background:#a36579"></i><i style="background:#e7c1ce"></i></span><strong>Dusty rose</strong><small>Muted</small></button>
+          </div>
+          <h4 class="minor-heading">Core semantics</h4>
+          <div class="swatch-grid">
+            <button class="swatch" data-copy="#000000" style="--swatch:#000000"><i></i><span><strong>Canvas</strong><small>Background</small></span><code>#000000</code></button>
+            <button class="swatch" data-copy="#F5F5F7" style="--swatch:#F5F5F7"><i></i><span><strong>Ink</strong><small>Primary text &amp; controls</small></span><code>#F5F5F7</code></button>
+            <button class="swatch" data-copy="#A8BFA8" style="--swatch:#A8BFA8"><i></i><span><strong>Sage</strong><small>Accent</small></span><code>#A8BFA8</code></button>
+            <button class="swatch" data-copy="#C2D6C1" style="--swatch:#C2D6C1"><i></i><span><strong>Sage deep</strong><small>Accent text</small></span><code>#C2D6C1</code></button>
+            <button class="swatch" data-copy="#D9A77A" style="--swatch:#D9A77A"><i></i><span><strong>Ochre</strong><small>Warm</small></span><code>#D9A77A</code></button>
+            <button class="swatch" data-copy="#A9B7C9" style="--swatch:#A9B7C9"><i></i><span><strong>Slate</strong><small>Cool</small></span><code>#A9B7C9</code></button>
+            <button class="swatch" data-copy="#E29379" style="--swatch:#E29379"><i></i><span><strong>Terracotta</strong><small>Warning</small></span><code>#E29379</code></button>
+          </div>
+          <p class="inline-note"><svg><use href="#i-info"/></svg>Select a swatch to copy its value. Never communicate status with color alone; pair it with text, shape, or an icon.</p>
+        </article>
+
+        <article class="doc-article observed-section" id="typography" data-title="Typography">
+          <div class="article-heading"><span>02.2</span><div><h3>Typography</h3><p>A calm text face paired with compact numerals. Regular 400 and semibold 600 cover most hierarchy.</p></div></div>
+          <div class="type-specimen">
+            <div class="type-display"><span>What did you eat today</span><strong>1,248<small>kcal</small></strong></div>
+            <div class="type-details"><span>Meican Sans</span><span>Fallback: system sans-serif</span><span>Numerals: tabular figures</span></div>
+          </div>
+          <div class="token-table-wrap">
+            <table class="token-table">
+              <thead><tr><th>Role</th><th>Size / line height</th><th>Weight</th><th>Tracking</th></tr></thead>
+              <tbody>
+                <tr><td><span class="type-row large-title">Large title</span></td><td>38 / 1.04</td><td>600</td><td>−1.3</td></tr>
+                <tr><td><span class="type-row page-title">Page title</span></td><td>32 / 1.08</td><td>600</td><td>−0.9</td></tr>
+                <tr><td><span class="type-row section-title">Section title</span></td><td>21 / 1.20</td><td>600</td><td>−0.4</td></tr>
+                <tr><td><span class="type-row body-title">Body</span></td><td>16 / 1.50</td><td>400</td><td>0</td></tr>
+                <tr><td><span class="type-row footnote-title">Footnote</span></td><td>13 / 1.50</td><td>400</td><td>0</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="rule-list"><p><strong>Align numbers</strong>Measurements and dates use tabular figures. Units are smaller and share the baseline.</p><p><strong>Limit line length</strong>Body text does not stretch indefinitely. When text is enlarged, let it wrap instead of clipping.</p></div>
+        </article>
+
+        <article class="doc-article observed-section" id="layout" data-title="Layout &amp; spacing">
+          <div class="article-heading"><span>02.3</span><div><h3>Layout &amp; spacing</h3><p>A 4px rhythm. Space follows content relationships instead of being divided evenly.</p></div></div>
+          <div class="spacing-demo" aria-label="Spacing examples of 4, 8, 12, 16, 24, and 42 pixels">
+            <div><i style="--size:4px"></i><span>4</span></div><div><i style="--size:8px"></i><span>8</span></div><div><i style="--size:12px"></i><span>12</span></div><div><i style="--size:16px"></i><span>16</span></div><div><i style="--size:24px"></i><span>24</span></div><div><i style="--size:42px"></i><span>42</span></div>
+          </div>
+          <div class="measurement-grid">
+            <div><strong>24 px</strong><span>Mobile page inset</span></div><div><strong>42 px</strong><span>Section gap</span></div><div><strong>24 px</strong><span>Default card padding</span></div><div><strong>760 px</strong><span>Product content width</span></div>
+          </div>
+          <p class="body-copy">Narrow screens stay single column. Wide screens cap the reading width and center the content. Reflow multi-column controls before reducing type. Fixed actions must not cover inputs, and scrollable content leaves about 144px behind a floating navigation bar.</p>
+        </article>
+
+        <article class="doc-article observed-section" id="shape" data-title="Shape &amp; depth">
+          <div class="article-heading"><span>02.4</span><div><h3>Shape &amp; depth</h3><p>Rounded corners are soft without becoming playful. Thin borders define surfaces; shadows only suggest a slight spatial relationship.</p></div></div>
+          <div class="radius-grid">
+            <div><i style="--radius:28px"></i><strong>28 px</strong><span>Primary card</span></div>
+            <div><i style="--radius:18px"></i><strong>18 px</strong><span>Standard input</span></div>
+            <div><i style="--radius:10px"></i><strong>10 px</strong><span>Badge</span></div>
+            <div><i style="--radius:999px"></i><strong>Pill</strong><span>Capsule control</span></div>
+          </div>
+          <div class="guideline-pair compact-guidelines">
+            <div class="guideline do"><span><svg><use href="#i-check"/></svg>Do</span><p>Use a 1px translucent card border and 0.7px dividers.</p></div>
+            <div class="guideline dont"><span><svg><use href="#i-close"/></svg>Avoid</span><p>Outlining every nested element or stacking heavy shadows.</p></div>
+          </div>
+        </article>
+
+        <article class="doc-article observed-section" id="motion" data-title="Motion">
+          <div class="article-heading"><span>02.5</span><div><h3>Motion</h3><p>Motion confirms input and preserves spatial continuity. It is not a demonstration of technique. Nothing loops, and entrances do not queue.</p></div></div>
+          <div class="motion-demo">
+            <button class="button button-primary" id="motion-button">Press to see the response</button>
+            <div class="motion-readout"><span>PRESS</span><strong>170 ms</strong><small>scale 0.97 · opacity 0.90</small></div>
+          </div>
+          <div class="duration-list"><div><span>Selection</span><i style="--duration:57%"></i><b>240 ms</b></div><div><span>Segmented thumb</span><i style="--duration:71%"></i><b>300 ms</b></div><div><span>Page entrance</span><i style="--duration:100%"></i><b>440 ms</b></div></div>
+          <p class="inline-note"><svg><use href="#i-info"/></svg>Respect the system “Reduce motion” setting. Replace spatial movement with an immediate state change or a quick fade.</p>
+        </article>
+      </section>
+
+      <section class="doc-section section-group observed-section" id="components" data-title="Components">
+        <header class="section-header">
+          <p class="section-index">03 / COMPONENTS</p>
+          <h2>Components</h2>
+          <p>A finite set of composable variants covers most product needs. Every specimen below is a real control and can be used directly.</p>
+        </header>
+
+        <article class="doc-article observed-section" id="buttons" data-title="Buttons">
+          <div class="article-heading"><span>03.1</span><div><h3>Buttons</h3><p>For submitting, confirming, and navigating. One primary action per area; everything else is secondary, outline, quiet, or glass.</p></div></div>
+          <div class="component-demo">
+            <div class="demo-label"><span>Variants</span><small>PRIMARY / SECONDARY / OUTLINE / QUIET / GLASS</small></div>
+            <div class="button-showcase">
+              <button class="button button-primary" id="save-button"><svg><use href="#i-check"/></svg><span>Save changes</span></button>
+              <button class="button button-secondary" id="secondary-button"><svg><use href="#i-plus"/></svg>Add item</button>
+              <button class="button button-outline" data-demo-message="Outline button">Outline</button>
+              <button class="button button-quiet" id="quiet-button" data-demo-message="Quiet button">Quiet<svg><use href="#i-arrow"/></svg></button>
+              <button class="button button-glass" data-demo-message="Glass button">Glass</button>
+            </div>
+            <div class="demo-divider"></div>
+            <div class="demo-label"><span>Sizes &amp; states</span><small>40 / 48 / 56 PX</small></div>
+            <div class="button-showcase">
+              <button class="button button-secondary button-small" data-demo-message="Small button">Small</button>
+              <button class="button button-primary button-large" data-demo-message="Large button">Large</button>
+              <button class="button button-secondary" disabled>Unavailable</button>
+              <button class="button button-danger" data-open-confirm>Delete</button>
+              <button class="button button-secondary button-icon" data-demo-message="Icon button" aria-label="Add"><svg><use href="#i-plus"/></svg></button>
+              <button class="button button-outline button-icon" data-demo-message="Outline icon button" aria-label="Search"><svg><use href="#i-search"/></svg></button>
+              <button class="button button-glass button-icon" data-demo-message="Glass icon button" aria-label="More"><svg><use href="#i-arrow-up"/></svg></button>
+            </div>
+          </div>
+          <div class="anatomy-grid"><div><span>Default height</span><strong>48 px</strong></div><div><span>Primary height</span><strong>56 px</strong></div><div><span>Target size</span><strong>≥ 44 px</strong></div></div>
+          <p class="body-copy">Press scales to 0.97 with no ripple. Loading keeps the original width. Disabled buttons do not respond. Use the glass variant only over an existing surface or divider.</p>
+          <details class="code-example"><summary>View button code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-buttons">Copy code</button><pre><code id="code-buttons">&lt;button class="dd-button primary"&gt;Save changes&lt;/button&gt;
+&lt;button class="dd-button secondary"&gt;Add item&lt;/button&gt;
+&lt;button class="dd-button outline"&gt;Outline&lt;/button&gt;
+&lt;button class="dd-button glass"&gt;Glass&lt;/button&gt;
+&lt;button class="dd-button secondary" disabled&gt;Unavailable&lt;/button&gt;
+
+&lt;style&gt;
+.dd-button { min-height: 48px; padding: 0 20px; border-radius: 999px;
+  border: 1px solid transparent; font: 600 14px/1 sans-serif; }
+.primary { background: #f5f5f7; color: #000; }
+.secondary { background: rgba(255,255,255,.07); color: #f5f5f7;
+  border-color: rgba(255,255,255,.12); }
+.outline { background: transparent; color: #f5f5f7;
+  border-color: rgba(255,255,255,.22); }
+.glass { background: rgba(255,255,255,.04); color: #c2d6c1; }
+.dd-button:active { transform: scale(.97); opacity: .9; }
+.dd-button:disabled { opacity: .4; cursor: not-allowed; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="selection" data-title="Segmented controls">
+          <div class="article-heading"><span>03.2</span><div><h3>Segmented controls</h3><p>Segmented controls handle a small set of exclusive options. Selection chips handle filters that people scan quickly.</p></div></div>
+          <div class="component-demo">
+            <div class="demo-label"><span>Meal segment</span><small>SELECT ONE</small></div>
+            <div class="segmented" role="group" aria-label="Choose a meal">
+              <button class="selected" data-segment="Breakfast" aria-pressed="true">Breakfast</button><button data-segment="Lunch" aria-pressed="false">Lunch</button><button data-segment="Dinner" aria-pressed="false">Dinner</button><button data-segment="Snack" aria-pressed="false">Snack</button>
+            </div>
+            <div class="selection-result"><span class="meal-icon sage"><svg><use href="#i-utensils"/></svg></span><div><small>Selected</small><strong id="segment-value">Breakfast</strong></div><span id="segment-calories">386 kcal</span></div>
+            <div class="choice-row" role="group" aria-label="Activity level"><button data-choice>Sedentary</button><button class="selected" data-choice aria-pressed="true">Light activity</button><button data-choice aria-pressed="false">Moderate</button></div>
+          </div>
+          <p class="body-copy">The selected state changes both the surface and <code>aria-pressed</code>. Use segments for 2–4 exclusive options. Use chips when there are more filters.</p>
+          <details class="code-example"><summary>View selection code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-selection">Copy code</button><pre><code id="code-selection">&lt;div class="dd-segment" role="group" aria-label="Meal"&gt;
+  &lt;button aria-pressed="true"&gt;Breakfast&lt;/button&gt;
+  &lt;button aria-pressed="false"&gt;Lunch&lt;/button&gt;
+  &lt;button aria-pressed="false"&gt;Dinner&lt;/button&gt;
+&lt;/div&gt;
+&lt;button class="dd-chip" aria-pressed="true"&gt;Light activity&lt;/button&gt;
+
+&lt;style&gt;
+.dd-segment { display: flex; gap: 3px; padding: 4px;
+  border-radius: 15px; background: rgba(255,255,255,.06); }
+.dd-segment button { flex: 1; min-height: 38px; border: 0;
+  border-radius: 11px; background: transparent; color: #a8a8ad; }
+.dd-segment [aria-pressed="true"] { background: #f5f5f7; color: #000; }
+.dd-chip { min-height: 40px; padding: 0 16px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12); background: transparent; }
+.dd-chip[aria-pressed="true"] { background: #f5f5f7; color: #000; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="switches" data-title="Switches &amp; checks">
+          <div class="article-heading"><span>03.3</span><div><h3>Switches &amp; checks</h3><p>A switch applies a setting immediately. Checkboxes select multiple items. Radio buttons choose one from a group.</p></div></div>
+          <div class="component-demo control-list-demo">
+            <label class="setting-row"><span><strong>Automatic sync</strong><small>Sync changes to other devices after saving</small></span><input class="switch-input" type="checkbox" checked><i class="switch-track" aria-hidden="true"></i></label>
+            <label class="setting-row"><span><strong>Reduce motion</strong><small>Turn off non-essential animation</small></span><input class="switch-input" type="checkbox"><i class="switch-track" aria-hidden="true"></i></label>
+            <div class="demo-divider"></div>
+            <div class="check-grid">
+              <label class="check-label"><input type="checkbox" checked><i></i><span>Breakfast</span></label>
+              <label class="check-label"><input type="checkbox"><i></i><span>Lunch</span></label>
+              <label class="check-label"><input type="checkbox" checked><i></i><span>Dinner</span></label>
+            </div>
+            <div class="radio-group" role="radiogroup" aria-label="Weight unit">
+              <label><input type="radio" name="unit" checked><i></i><span>Kilograms</span></label>
+              <label><input type="radio" name="unit"><i></i><span>Jin</span></label>
+              <label><input type="radio" name="unit" disabled><i></i><span>Pounds (unavailable)</span></label>
+            </div>
+          </div>
+          <p class="body-copy">The entire row is clickable. Label the setting itself, not the act of toggling. A radio group always keeps one option selected.</p>
+          <details class="code-example"><summary>View toggle code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-switches">Copy code</button><pre><code id="code-switches">&lt;label class="dd-switch"&gt;Automatic sync
+  &lt;input type="checkbox" checked&gt;&lt;i aria-hidden="true"&gt;&lt;/i&gt;
+&lt;/label&gt;
+&lt;label class="dd-check"&gt;&lt;input type="checkbox" checked&gt;&lt;i&gt;&lt;/i&gt;Breakfast&lt;/label&gt;
+
+&lt;style&gt;
+.dd-switch { display: flex; align-items: center; justify-content: space-between;
+  min-height: 48px; cursor: pointer; }
+.dd-switch input { position: absolute; opacity: 0; }
+.dd-switch i { width: 48px; height: 28px; padding: 3px; border-radius: 999px;
+  background: #3a3a3c; transition: background .2s; }
+.dd-switch i::after { content: ""; display: block; width: 22px; height: 22px;
+  border-radius: 50%; background: #fff; transition: transform .2s; }
+.dd-switch input:checked + i { background: #a8bfa8; }
+.dd-switch input:checked + i::after { transform: translateX(20px); }
+.dd-switch input:focus-visible + i { outline: 2px solid #c2d6c1; outline-offset: 3px; }
+.dd-check { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
+.dd-check input { width: 20px; height: 20px; accent-color: #a8bfa8; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="inputs" data-title="Inputs">
+          <div class="article-heading"><span>03.4</span><div><h3>Inputs</h3><p>A persistent label sits above the field; placeholder text never replaces it. Units and values share a baseline.</p></div></div>
+          <div class="component-demo converter-demo">
+            <div class="demo-label"><span>Energy converter</span><small>kJ ÷ 4.184 = kcal</small></div>
+            <label class="field-label" for="energy-input">Energy from the nutrition label</label>
+            <div class="input-wrap"><svg><use href="#i-sparkle"/></svg><input id="energy-input" type="number" inputmode="decimal" min="0" step="1" value="1000" aria-describedby="energy-help"><span>kJ</span></div>
+            <p class="field-help" id="energy-help">Enter the kilojoule value per serving. The result updates automatically.</p>
+            <div class="preset-row" aria-label="Common values"><button data-kj="500">500 kJ</button><button data-kj="1000">1000 kJ</button><button data-kj="2000">2000 kJ</button></div>
+            <div class="conversion-result"><span>Equals</span><strong id="energy-result">239<small>kcal</small></strong><i aria-hidden="true"></i></div>
+          </div>
+          <div class="input-variant-grid">
+            <label class="field-block"><span class="field-label">Transparent</span><span class="input-wrap input-transparent"><input type="text" value="Rice" aria-label="Transparent input"><span>Staple</span></span></label>
+            <label class="field-block"><span class="field-label">Disabled</span><span class="input-wrap input-disabled"><input type="text" value="Not editable" aria-label="Disabled input" disabled></span></label>
+            <label class="field-block field-wide"><span class="field-label">Error</span><span class="input-wrap input-error"><input type="email" value="name@" aria-describedby="email-error" aria-invalid="true"></span><small class="error-text" id="email-error">Enter a complete email address.</small></label>
+            <label class="field-block field-wide"><span class="field-label">Note</span><textarea class="text-area" rows="3" placeholder="Add a portion, preparation method, or other note"></textarea></label>
+          </div>
+          <p class="body-copy">Focus changes the border and cursor only. An error message sits next to its field and never clears what was entered. Disabled fields remain readable.</p>
+          <details class="code-example"><summary>View input code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-inputs">Copy code</button><pre><code id="code-inputs">&lt;label for="energy"&gt;Energy from the nutrition label&lt;/label&gt;
+&lt;div class="dd-field"&gt;&lt;input id="energy" type="number" value="1000"&gt;&lt;span&gt;kJ&lt;/span&gt;&lt;/div&gt;
+&lt;small&gt;Enter the kilojoule value per serving.&lt;/small&gt;
+&lt;div class="dd-field transparent"&gt;&lt;input type="text" value="Rice"&gt;&lt;/div&gt;
+&lt;div class="dd-field error"&gt;&lt;input type="email" value="name@" aria-invalid="true"&gt;&lt;/div&gt;
+
+&lt;style&gt;
+.dd-field { min-height: 54px; display: flex; align-items: center; gap: 10px;
+  padding: 0 16px; border: 1px solid rgba(255,255,255,.12);
+  border-radius: 17px; background: rgba(255,255,255,.05); }
+.dd-field:focus-within { border-color: #c2d6c1; }
+.dd-field input { flex: 1; min-width: 0; border: 0; outline: 0;
+  background: transparent; color: #f5f5f7; font: 16px sans-serif; }
+.dd-field.transparent { background: transparent; }
+.dd-field.error { border-color: #e29379; }
+.dd-field input:disabled { opacity: .45; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="search-slider" data-title="Search &amp; sliders">
+          <div class="article-heading"><span>03.5</span><div><h3>Search &amp; sliders</h3><p>Search fields offer a clear action. Sliders adjust a value within a known range and always show the current value.</p></div></div>
+          <div class="component-demo">
+            <label class="field-label" for="demo-search">Search foods</label>
+            <div class="input-wrap search-field"><svg><use href="#i-search"/></svg><input id="demo-search" type="search" placeholder="Enter a name, for example: rice"><button id="clear-demo-search" aria-label="Clear search" type="button"><svg><use href="#i-close"/></svg></button></div>
+            <div class="search-suggestion"><span>Common searches</span><button data-search-term="Rice">Rice</button><button data-search-term="Chicken breast">Chicken breast</button><button data-search-term="Milk">Milk</button></div>
+            <div class="demo-divider"></div>
+            <div class="slider-label"><label for="portion-slider">Portion</label><output id="portion-output" for="portion-slider">150 g</output></div>
+            <input class="range-input" id="portion-slider" type="range" min="0" max="500" step="10" value="150">
+            <div class="range-limits"><span>0 g</span><span>500 g</span></div>
+            <label class="field-label second-label" for="volume-slider">Opacity <output id="volume-output">60%</output></label>
+            <input class="range-input range-warm" id="volume-slider" type="range" min="0" max="100" value="60">
+          </div>
+          <p class="body-copy">Sliders support arrow keys and expose a readable value. Pair a slider with a number field when exact input matters.</p>
+          <details class="code-example"><summary>View search and slider code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-search-slider">Copy code</button><pre><code id="code-search-slider">&lt;div class="dd-search"&gt;&lt;input type="search" placeholder="Search foods"&gt;&lt;/div&gt;
+&lt;label for="portion"&gt;Portion &lt;output id="value"&gt;150 g&lt;/output&gt;&lt;/label&gt;
+&lt;input id="portion" type="range" min="0" max="500" step="10" value="150"
+  oninput="document.querySelector('#value').value = this.value + ' g'"&gt;
+
+&lt;style&gt;
+.dd-search { padding: 0 16px; border-radius: 17px;
+  background: rgba(255,255,255,.05); }
+.dd-search input { width: 100%; min-height: 52px; border: 0; outline: 0;
+  background: transparent; color: #f5f5f7; }
+input[type="range"] { width: 100%; height: 5px; accent-color: #a8bfa8; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="cards" data-title="Cards &amp; lists">
+          <div class="article-heading"><span>03.6</span><div><h3>Cards &amp; lists</h3><p>Related content shares one parent surface. Rows use thin dividers; do not give every row its own card.</p></div></div>
+          <div class="component-demo">
+            <div class="demo-label"><span>Grouped list</span><small>28 PX RADIUS</small></div>
+            <div class="grouped-card">
+              <button class="record-row" data-record="Breakfast · 386 kcal"><span class="meal-icon warm"><svg><use href="#i-sunrise"/></svg></span><span class="record-copy"><strong>Breakfast</strong><small>08:20 · 3 foods</small></span><span class="record-value">386<small>kcal</small></span><svg class="row-chevron"><use href="#i-chevron"/></svg></button>
+              <button class="record-row" data-record="Lunch · 562 kcal"><span class="meal-icon sage"><svg><use href="#i-utensils"/></svg></span><span class="record-copy"><strong>Lunch</strong><small>12:35 · 4 foods</small></span><span class="record-value">562<small>kcal</small></span><svg class="row-chevron"><use href="#i-chevron"/></svg></button>
+              <button class="record-row" data-record="Dinner · 300 kcal"><span class="meal-icon cool"><svg><use href="#i-moonstar"/></svg></span><span class="record-copy"><strong>Dinner</strong><small>18:40 · 2 foods</small></span><span class="record-value">300<small>kcal</small></span><svg class="row-chevron"><use href="#i-chevron"/></svg></button>
+            </div>
+          </div>
+          <div class="surface-variant-grid">
+            <div class="surface-sample"><span>Default card</span><strong>Fill and thin border</strong></div>
+            <div class="surface-sample surface-outline"><span>Outline card</span><strong>Transparent background</strong></div>
+            <div class="surface-sample surface-flat"><span>Flat card</span><strong>Fill only</strong></div>
+          </div>
+          <p class="body-copy">Primary label first, supporting detail below, value at the end. Dividers align with the text column. Clickable rows provide hover, focus, and pressed states.</p>
+          <details class="code-example"><summary>View card and list code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-cards">Copy code</button><pre><code id="code-cards">&lt;section class="dd-card"&gt;
+  &lt;button class="dd-row"&gt;&lt;span&gt;Breakfast&lt;small&gt;08:20 · 3 foods&lt;/small&gt;&lt;/span&gt;&lt;strong&gt;386 kcal&lt;/strong&gt;&lt;/button&gt;
+  &lt;button class="dd-row"&gt;&lt;span&gt;Lunch&lt;small&gt;12:35 · 4 foods&lt;/small&gt;&lt;/span&gt;&lt;strong&gt;562 kcal&lt;/strong&gt;&lt;/button&gt;
+&lt;/section&gt;
+&lt;section class="dd-card outline"&gt;Outline card&lt;/section&gt;
+&lt;section class="dd-card flat"&gt;Flat card&lt;/section&gt;
+
+&lt;style&gt;
+.dd-card { padding: 0 16px; border: 1px solid rgba(255,255,255,.12);
+  border-radius: 24px; background: #141416; }
+.dd-row { width: 100%; min-height: 68px; display: flex; align-items: center;
+  justify-content: space-between; border: 0; background: transparent; color: #f5f5f7; }
+.dd-row + .dd-row { border-top: 1px solid rgba(255,255,255,.1); }
+.dd-row small { display: block; margin-top: 4px; color: #a8a8ad; }
+.dd-card.outline { background: transparent; }
+.dd-card.flat { border-color: transparent; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="badges" data-title="Badges &amp; avatars">
+          <div class="article-heading"><span>03.7</span><div><h3>Badges &amp; avatars</h3><p>Badges show a category or short status. Avatars identify a person, group, or source.</p></div></div>
+          <div class="component-demo">
+            <div class="demo-label"><span>Badges</span><small>SEMANTIC / OUTLINE / GLASS</small></div>
+            <div class="badge-showcase"><span class="dd-badge">Default</span><span class="dd-badge success">Complete</span><span class="dd-badge warm">Pending</span><span class="dd-badge danger">Issue</span><span class="dd-badge outline">Outline</span><span class="dd-badge glass">Glass</span><span class="dd-badge dot">Syncing</span></div>
+            <div class="demo-divider"></div>
+            <div class="demo-label"><span>Avatars</span><small>32 / 40 / 56 PX</small></div>
+            <div class="avatar-showcase"><span class="avatar avatar-small">D</span><span class="avatar">D</span><span class="avatar avatar-large avatar-warm">M</span><span class="avatar avatar-image" aria-label="Placeholder avatar"><svg><use href="#i-user"/></svg></span><div class="avatar-stack" aria-label="Three members"><span class="avatar">D</span><span class="avatar avatar-warm">M</span><span class="avatar avatar-cool">A</span><span class="avatar avatar-more">+2</span></div></div>
+          </div>
+          <p class="body-copy">Keep status badges to one or two words. Use initials when there is no photo, and never rely on color alone to identify members.</p>
+          <details class="code-example"><summary>View badge and avatar code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-badges">Copy code</button><pre><code id="code-badges">&lt;span class="dd-badge success"&gt;Complete&lt;/span&gt;
+&lt;span class="dd-badge outline"&gt;Outline&lt;/span&gt;
+&lt;span class="dd-avatar"&gt;D&lt;/span&gt;
+
+&lt;style&gt;
+.dd-badge { display: inline-flex; padding: 5px 9px; border-radius: 10px;
+  background: rgba(255,255,255,.07); color: #f5f5f7; font-size: 11px; }
+.dd-badge.success { background: rgba(168,191,168,.14); color: #c2d6c1; }
+.dd-badge.outline { background: transparent; border: 1px solid rgba(255,255,255,.18); }
+.dd-avatar { width: 40px; height: 40px; display: inline-grid; place-items: center;
+  border-radius: 50%; background: rgba(168,191,168,.14); color: #c2d6c1; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="progress" data-title="Progress &amp; loading">
+          <div class="article-heading"><span>03.8</span><div><h3>Progress &amp; loading</h3><p>Show a value when progress is known. Use an indeterminate bar or skeleton while the wait is unknown, with no layout shift.</p></div></div>
+          <div class="component-demo progress-demo">
+            <div class="progress-example"><div><span>Daily target</span><strong>69%</strong></div><div class="demo-progress" role="progressbar" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"><i style="width:69%"></i></div><small>1,248 / 1,800 kcal</small></div>
+            <div class="progress-example"><div><span>Over target</span><strong>112%</strong></div><div class="demo-progress over" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="12% over target"><i style="width:100%"></i></div><small>2,016 / 1,800 kcal</small></div>
+            <div class="progress-example"><div><span>Syncing</span><strong>Unknown</strong></div><div class="demo-progress indeterminate"><i></i></div><small>Merging the latest records</small></div>
+            <div class="demo-divider"></div>
+            <div class="loading-row"><span class="spinner" role="status" aria-label="Loading"></span><div class="skeleton-sample" aria-label="Content loading"><i></i><i></i><i></i></div></div>
+          </div>
+          <p class="body-copy">The progress bar is 6px high with a 3px radius. When reduced motion is on, the indeterminate bar and spinner become static.</p>
+          <details class="code-example"><summary>View progress code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-progress">Copy code</button><pre><code id="code-progress">&lt;div class="dd-progress" role="progressbar" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"&gt;
+  &lt;i style="width:69%"&gt;&lt;/i&gt;
+&lt;/div&gt;
+&lt;span class="dd-spinner" role="status" aria-label="Loading"&gt;&lt;/span&gt;
+
+&lt;style&gt;
+.dd-progress { height: 6px; border-radius: 3px; background: rgba(255,255,255,.07); }
+.dd-progress i { display: block; height: 100%; border-radius: inherit; background: #a8bfa8; }
+.dd-spinner { width: 22px; height: 22px; border: 2px solid rgba(255,255,255,.12);
+  border-top-color: #a8bfa8; border-radius: 50%; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .dd-spinner { animation: none; } }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="charts" data-title="Data visualization">
+          <div class="article-heading"><span>03.9</span><div><h3>Data visualization</h3><p>Charts sit below the value and its interpretation. Remove extra grid lines and axes so the trend reads immediately.</p></div></div>
+          <div class="chart-grid">
+            <div class="chart-card">
+              <div class="chart-heading"><div><span>This week's average</span><strong>1,642<small>kcal / day</small></strong></div><span class="status-tag">7 days logged</span></div>
+              <div class="bar-chart" role="img" aria-label="Intake from Monday to Sunday: 1550, 1720, 1600, 1810, 1490, 1760, and 1620 kcal">
+                <div style="--bar:62%"><i></i><span>M</span></div><div style="--bar:82%"><i></i><span>T</span></div><div style="--bar:68%"><i></i><span>W</span></div><div style="--bar:92%"><i></i><span>T</span></div><div style="--bar:54%"><i></i><span>F</span></div><div style="--bar:86%"><i></i><span>S</span></div><div class="today" style="--bar:73%"><i></i><span>S</span></div>
+              </div>
+            </div>
+            <div class="chart-card trend-card">
+              <div class="chart-heading"><div><span>Weight trend</span><strong>68.4<small>kg</small></strong></div><span class="trend-down">7 days −0.4</span></div>
+              <svg class="line-chart" viewBox="0 0 320 116" role="img" aria-label="Weight decreasing gradually from 68.8 to 68.4 kilograms over seven days">
+                <path class="goal-line" d="M4 44H316"/>
+                <path class="trend-area" d="M4 32C35 28 48 49 80 48S124 62 155 58 201 72 234 66 277 78 316 74V108H4Z"/>
+                <path class="trend-line" d="M4 32C35 28 48 49 80 48S124 62 155 58 201 72 234 66 277 78 316 74"/>
+                <circle cx="316" cy="74" r="5"/><circle class="inner-dot" cx="316" cy="74" r="2.5"/>
+              </svg>
+              <div class="chart-dates"><span>10/30</span><span>11/05</span></div>
+            </div>
+          </div>
+          <div class="chart-legend"><span><i class="sage"></i>Current period</span><span><i class="muted"></i>Previous period</span><span><i class="dash"></i>Target</span></div>
+          <p class="inline-note"><svg><use href="#i-info"/></svg>Provide a text summary and exact values. Label the limits of estimated data next to the estimate.</p>
+          <details class="code-example"><summary>View chart code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-charts">Copy code</button><pre><code id="code-charts">&lt;figure&gt;&lt;figcaption&gt;This week's average: 1,642 kcal / day&lt;/figcaption&gt;
+  &lt;svg viewBox="0 0 320 116" role="img" aria-label="Weight down 0.4 kilograms over seven days"&gt;
+    &lt;path d="M4 32C80 28 100 62 155 58S250 78 316 74"
+      fill="none" stroke="#a8bfa8" stroke-width="2.4"/&gt;
+    &lt;circle cx="316" cy="74" r="5" fill="#a8bfa8"/&gt;
+  &lt;/svg&gt;
+&lt;/figure&gt;
+&lt;div class="dd-bars" aria-label="Seven-day intake bar chart"&gt;
+  &lt;i style="height:62%"&gt;&lt;/i&gt;&lt;i style="height:82%"&gt;&lt;/i&gt;&lt;i style="height:68%"&gt;&lt;/i&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+figure { margin: 0; } figcaption { margin-bottom: 16px; color: #a8a8ad; }
+.dd-bars { height: 118px; display: flex; align-items: flex-end; gap: 8px; }
+.dd-bars i { width: 16px; border-radius: 5px; background: #a8bfa8; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="tables" data-title="Data tables">
+          <div class="article-heading"><span>03.10</span><div><h3>Data tables</h3><p>For comparing rows of the same kind. Numbers align right, headers stay visible, and narrow screens scroll horizontally.</p></div></div>
+          <div class="component-demo table-demo">
+            <div class="table-toolbar"><span>Recent records</span><button class="button button-secondary button-small" id="table-sort">Sort by calories</button></div>
+            <div class="data-table-wrap"><table class="data-table"><thead><tr><th scope="col">Food</th><th scope="col">Amount</th><th scope="col">Calories</th><th scope="col">Status</th></tr></thead><tbody id="food-table-body"><tr data-calories="232"><th scope="row">Rice</th><td>150 g</td><td>232 kcal</td><td><span class="dd-badge success">Logged</span></td></tr><tr data-calories="495"><th scope="row">Chicken breast</th><td>300 g</td><td>495 kcal</td><td><span class="dd-badge success">Logged</span></td></tr><tr data-calories="126"><th scope="row">Broccoli</th><td>200 g</td><td>126 kcal</td><td><span class="dd-badge">Draft</span></td></tr></tbody></table></div>
+          </div>
+          <p class="body-copy">Tables are for comparison, not for arranging ordinary forms. Do not hide important actions behind hover. On phones, switch to a grouped list.</p>
+          <details class="code-example"><summary>View table code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-tables">Copy code</button><pre><code id="code-tables">&lt;div class="dd-table-scroll"&gt;&lt;table&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Food&lt;/th&gt;&lt;th&gt;Amount&lt;/th&gt;&lt;th&gt;Calories&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;&lt;tr&gt;&lt;th scope="row"&gt;Rice&lt;/th&gt;&lt;td&gt;150 g&lt;/td&gt;&lt;td&gt;232 kcal&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;
+
+&lt;style&gt;
+.dd-table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,.1); }
+thead th { color: #a8a8ad; font-size: 12px; font-weight: 400; }
+td:last-child, th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="feedback" data-title="Feedback &amp; overlays">
+          <div class="article-heading"><span>03.11</span><div><h3>Feedback &amp; overlays</h3><p>Inline alerts carry persistent information. Toasts report a result. Dialogs interrupt for a decision. Bottom sheets add mobile actions.</p></div></div>
+          <div class="alert-stack">
+            <div class="dd-alert"><svg><use href="#i-info"/></svg><div><strong>Demo data only</strong><p>Records here are not uploaded or saved.</p></div><button aria-label="Dismiss alert" data-dismiss-alert><svg><use href="#i-close"/></svg></button></div>
+            <div class="dd-alert success"><svg><use href="#i-check"/></svg><div><strong>Sync complete</strong><p>Every device is up to date.</p></div></div>
+            <div class="dd-alert warning"><svg><use href="#i-info"/></svg><div><strong>One field is missing</strong><p>Enter a target weight to continue.</p></div></div>
+          </div>
+          <div class="component-demo feedback-demo">
+            <div class="feedback-actions"><button class="button button-secondary" id="toast-button"><svg><use href="#i-check"/></svg>Show toast</button><button class="button button-quiet" id="dialog-button">Confirm dialog<svg><use href="#i-arrow-up"/></svg></button><button class="button button-quiet" id="sheet-button">Bottom sheet<svg><use href="#i-arrow-up"/></svg></button></div>
+            <div class="toast-specimen" aria-hidden="true"><svg><use href="#i-check"/></svg><span>Changes saved</span><small>Now</small></div>
+          </div>
+          <div class="tooltip-showcase"><button class="button button-outline" data-tooltip="Copy the current record">Hover for a tooltip</button><button class="button button-glass" data-tooltip="Supplementary information only">Glass</button></div>
+          <p class="body-copy">Tooltips add a short clarification and never contain a required action. Confirm only irreversible actions; routine saves do not need repeated prompts.</p>
+          <details class="code-example"><summary>View feedback code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-feedback">Copy code</button><pre><code id="code-feedback">&lt;div class="dd-alert" role="status"&gt;Every device is up to date.&lt;/div&gt;
+&lt;button id="open"&gt;Open dialog&lt;/button&gt;
+&lt;dialog id="confirm"&gt;&lt;h2&gt;Delete this record?&lt;/h2&gt;&lt;p&gt;This cannot be undone.&lt;/p&gt;
+  &lt;button onclick="confirm.close()"&gt;Cancel&lt;/button&gt;&lt;button&gt;Delete&lt;/button&gt;
+&lt;/dialog&gt;
+&lt;div class="dd-toast" role="status"&gt;Changes saved&lt;/div&gt;
+
+&lt;style&gt;
+.dd-alert { padding: 14px 16px; border: 1px solid rgba(168,191,168,.2);
+  border-radius: 16px; background: rgba(168,191,168,.1); color: #c2d6c1; }
+dialog { max-width: 360px; padding: 24px; border: 1px solid rgba(255,255,255,.16);
+  border-radius: 32px; background: #141416; color: #f5f5f7; }
+dialog::backdrop { background: rgba(0,0,0,.72); }
+.dd-toast { padding: 13px 18px; border-radius: 18px; background: #1c1c1e; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+      </section>
+
+      <section class="doc-section section-group observed-section" id="patterns" data-title="Patterns">
+        <header class="section-header">
+          <p class="section-index">04 / PATTERNS</p>
+          <h2>Patterns</h2>
+          <p>Navigation, accessibility, and tokens. Platforms may change how an action is performed, but component states and reading order stay the same.</p>
+        </header>
+
+        <article class="doc-article observed-section" id="navigation" data-title="Navigation">
+          <div class="article-heading"><span>04.1</span><div><h3>Navigation</h3><p>Mobile uses a four-item floating capsule navigation with an inset pill for the selected item. Wide screens keep the same order and state.</p></div></div>
+          <div class="component-demo navigation-demo">
+            <div class="nav-demo-copy"><small>Current destination</small><strong id="nav-demo-title">Today</strong><p id="nav-demo-description">See today's summary and recent records.</p></div>
+            <div class="floating-tabs" role="group" aria-label="Example navigation">
+              <button class="selected" data-nav="Today" data-description="See today's summary and recent records." aria-pressed="true"><svg><use href="#i-home"/></svg><span>Today</span></button>
+              <button data-nav="Records" data-description="Review each meal and its calories by date." aria-pressed="false"><svg><use href="#i-calendar"/></svg><span>Records</span></button>
+              <button data-nav="Trends" data-description="Understand body changes and long-term goals." aria-pressed="false"><svg><use href="#i-trend"/></svg><span>Trends</span></button>
+              <button data-nav="Me" data-description="Manage preferences, sync, and data export." aria-pressed="false"><svg><use href="#i-user"/></svg><span>Me</span></button>
+            </div>
+          </div>
+          <div class="page-tabs" role="group" aria-label="Page tabs"><button class="selected" data-page-tab aria-pressed="true">All</button><button data-page-tab aria-pressed="false">Unread</button><button data-page-tab aria-pressed="false">Archived</button></div>
+          <div class="pagination" aria-label="Pagination"><button class="button-icon button-outline" aria-label="Previous page" data-demo-message="Previous page"><svg><use href="#i-chevron"/></svg></button><button class="selected" aria-current="page">1</button><button data-demo-message="Page 2">2</button><button data-demo-message="Page 3">3</button><span>…</span><button data-demo-message="Page 8">8</button><button class="button-icon button-outline" aria-label="Next page" data-demo-message="Next page"><svg><use href="#i-chevron"/></svg></button></div>
+          <div class="rule-list"><p><strong>Size</strong>The floating bar is 66px high and 296–420px wide. Touch targets are at least 44px.</p><p><strong>Hierarchy</strong>Do not combine multiple navigation systems at one level. Keep content clear of the floating area.</p></div>
+          <details class="code-example"><summary>View navigation code<svg><use href="#i-chevron"/></svg></summary><div class="code-example-body"><button class="code-copy" data-code-copy="code-navigation">Copy code</button><pre><code id="code-navigation">&lt;nav class="dd-tabs" aria-label="Primary"&gt;
+  &lt;a href="/today" aria-current="page"&gt;Today&lt;/a&gt;&lt;a href="/records"&gt;Records&lt;/a&gt;
+  &lt;a href="/trends"&gt;Trends&lt;/a&gt;&lt;a href="/me"&gt;Me&lt;/a&gt;
+&lt;/nav&gt;
+&lt;nav class="dd-page-tabs" aria-label="Filter"&gt;
+  &lt;button aria-pressed="true"&gt;All&lt;/button&gt;&lt;button aria-pressed="false"&gt;Unread&lt;/button&gt;
+&lt;/nav&gt;
+
+&lt;style&gt;
+.dd-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
+  width: 390px; max-width: 100%; padding: 6px; border-radius: 999px; background: #000; }
+.dd-tabs a { min-height: 54px; display: grid; place-items: center;
+  border-radius: 999px; color: #a8a8ad; text-decoration: none; }
+.dd-tabs [aria-current="page"] { background: #1c1c1e; color: #c2d6c1; }
+.dd-page-tabs { display: flex; gap: 24px; border-bottom: 1px solid rgba(255,255,255,.12); }
+.dd-page-tabs [aria-pressed="true"] { color: #c2d6c1; border-bottom: 2px solid #a8bfa8; }
+&lt;/style&gt;</code></pre></div></details>
+        </article>
+
+        <article class="doc-article observed-section" id="accessibility" data-title="Accessibility">
+          <div class="article-heading"><span>04.2</span><div><h3>Accessibility</h3><p>Accessibility is part of every component, not a separate review step.</p></div></div>
+          <div class="accessibility-list">
+            <div><span>01</span><div><h4>Visible focus</h4><p>Use a deep sage focus ring. Focus order follows reading order.</p></div></div>
+            <div><span>02</span><div><h4>Enough contrast</h4><p>Check text contrast on the actual composited surface, not on theoretical translucent values.</p></div></div>
+            <div><span>03</span><div><h4>More than color</h4><p>Pair color with text, shape, icons, and status wording.</p></div></div>
+            <div><span>04</span><div><h4>User preferences</h4><p>Support text scaling, reduced motion, keyboard input, and screen readers.</p></div></div>
+          </div>
+          <button class="focus-demo" id="focus-demo">Press Tab to see the focus style<svg><use href="#i-arrow"/></svg></button>
+        </article>
+
+        <article class="doc-article observed-section" id="tokens" data-title="Design tokens">
+          <div class="article-heading"><span>04.3</span><div><h3>Design tokens</h3><p>Color, type, spacing, radius, motion, and component sizes are provided as platform-neutral JSON.</p></div></div>
+          <div class="code-card">
+            <div class="code-header"><span><i></i>design-tokens.json</span><button id="copy-code" aria-label="Copy token example"><svg><use href="#i-copy"/></svg><span>Copy</span></button></div>
+            <pre><code id="token-code">{
+  "color": {
+    "dark": {
+      "background": "#FF000000",
+      "ink": "#FFF5F5F7",
+      "accent": "#FFA8BFA8"
+    }
+  },
+  "radius": {
+    "card": 28,
+    "field": 18,
+    "pill": 999
+  },
+  "motion": {
+    "press": { "durationMs": 170, "scale": 0.97 }
+  }
+}</code></pre>
+          </div>
+          <div class="resource-actions"><a class="button button-primary" href="../tokens/design-tokens.json" download><svg><use href="#i-download"/></svg>Download all tokens</a><a class="text-link" href="../references/foundations.md">Read the foundations<svg><use href="#i-arrow-up"/></svg></a></div>
+          <p class="body-copy">Reuse an existing semantic role before adding one. When a new role is necessary, define its dark and light values, purpose, and surface instead of hard-coding a color in a component.</p>
+        </article>
+      </section>
+
+      <footer class="site-footer">
+        <a class="footer-title" href="#overview">Dou Design</a>
+        <p>Design guidelines and component specimens</p>
+        <div><span>1.0.2</span><a href="#overview">Back to top ↑</a></div>
+      </footer>
+    </main>
+  </div>
+
+  <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title">
+    <div class="dialog-topline"><h2 id="search-title">Search guidelines</h2><button class="icon-button" data-close-dialog aria-label="Close search"><svg><use href="#i-close"/></svg></button></div>
+    <div class="search-input-wrap"><svg><use href="#i-search"/></svg><input id="search-input" type="search" placeholder="Search color, buttons, spacing…" autocomplete="off" aria-label="Search sections"></div>
+    <nav class="search-results" id="search-results" aria-label="Search results"></nav>
+    <p class="search-hint">Type to filter sections. Press Esc to close.</p>
+  </dialog>
+
+  <dialog class="confirm-dialog" id="confirm-dialog" aria-labelledby="confirm-title">
+    <span class="dialog-symbol"><svg><use href="#i-trash"/></svg></span>
+    <h2 id="confirm-title">Delete this record?</h2>
+    <p>This cannot be undone. Related statistics will update as well.</p>
+    <div class="dialog-actions"><button class="button button-secondary" data-close-dialog>Keep record</button><button class="button button-danger" id="confirm-delete">Delete</button></div>
+  </dialog>
+
+  <dialog class="bottom-sheet" id="sheet-dialog" aria-labelledby="sheet-title">
+    <span class="sheet-handle" aria-hidden="true"></span>
+    <div class="dialog-topline"><div><h2 id="sheet-title">Choose a meal</h2><p>You can change this after saving.</p></div><button class="icon-button" data-close-dialog aria-label="Close bottom sheet"><svg><use href="#i-close"/></svg></button></div>
+    <div class="sheet-options"><button data-sheet-choice="Breakfast"><span class="meal-icon warm"><svg><use href="#i-sunrise"/></svg></span><strong>Breakfast</strong><svg><use href="#i-chevron"/></svg></button><button data-sheet-choice="Lunch"><span class="meal-icon sage"><svg><use href="#i-utensils"/></svg></span><strong>Lunch</strong><svg><use href="#i-chevron"/></svg></button><button data-sheet-choice="Dinner"><span class="meal-icon cool"><svg><use href="#i-moonstar"/></svg></span><strong>Dinner</strong><svg><use href="#i-chevron"/></svg></button></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"><svg><use href="#i-check"/></svg><span>Done</span></div>
+</body>
+</html>

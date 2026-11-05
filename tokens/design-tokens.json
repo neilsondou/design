@@ -1,0 +1,437 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "dou-design",
+  "version": "1.0.2",
+  "description": "Framework-neutral visual and interaction tokens for Dou Design.",
+  "source": "Observed product interface and shared design references",
+  "units": "Reference values are CSS px at a 1x viewport scale; map proportionally to native density-independent units.",
+  "color": {
+    "dark": {
+      "background": "#FF000000",
+      "backgroundDeep": "#FF000000",
+      "surface": "#FFF5F5F7",
+      "glass": "#0EFFFFFF",
+      "glassStrong": "#1AFFFFFF",
+      "glassBorder": "#26FFFFFF",
+      "surfaceMuted": "#14FFFFFF",
+      "glassBlack": "#D9141416",
+      "ink": "#FFF5F5F7",
+      "secondary": "#A8F5F5F7",
+      "tertiary": "#66F5F5F7",
+      "accent": "#FFA8BFA8",
+      "accentDeep": "#FFC2D6C1",
+      "accentSoft": "#24A8BFA8",
+      "warm": "#FFD9A77A",
+      "cool": "#FFA9B7C9",
+      "line": "#1FFFFFFF",
+      "lineStrong": "#33FFFFFF",
+      "warning": "#FFE29379",
+      "danger": "#FFE29379",
+      "scrim": "#B8000000",
+      "sheet": "#F20C0C0D",
+      "dialog": "#E61A1A1C",
+      "toast": "#F0141416",
+      "dock": "#F20A0A0B",
+      "tabBar": "#E6000000",
+      "tabBarWeb": "#FF000000",
+      "tabPill": "#FF1C1C1E",
+      "pillThumb": "#FF232326",
+      "borderStrong": "#33FFFFFF",
+      "ring": "#14FFFFFF",
+      "dateSheet": "#FF161618",
+      "cupertinoBar": "#E60E0E10",
+      "fieldFill": "#14FFFFFF",
+      "hover": "#0AFFFFFF",
+      "handle": "#3DFFFFFF",
+      "alertButton": "#26FFFFFF",
+      "onSurfaceBorder": "#66FFFFFF",
+      "barTop": "#FFD5E2D2",
+      "barBottom": "#FFA8BFA8",
+      "barMutedTop": "#FF93A593",
+      "barMutedBottom": "#FF6E826F"
+    },
+    "light": {
+      "background": "#FFF4EFE5",
+      "backgroundDeep": "#FFF4EFE5",
+      "surface": "#FF2C2820",
+      "glass": "#0F5B4C37",
+      "glassStrong": "#1A5B4C37",
+      "glassBorder": "#245B4C37",
+      "surfaceMuted": "#145B4C37",
+      "glassBlack": "#F5FFFDF7",
+      "ink": "#FF29251E",
+      "secondary": "#A629251E",
+      "tertiary": "#7329251E",
+      "accent": "#FF728E71",
+      "accentDeep": "#FF4D6B50",
+      "accentSoft": "#1F557A58",
+      "warm": "#FFA56F3E",
+      "cool": "#FF5E7186",
+      "line": "#1F4A3F2E",
+      "lineStrong": "#334A3F2E",
+      "warning": "#FFB2553D",
+      "danger": "#FFB2553D",
+      "scrim": "#66000000",
+      "sheet": "#FFFCF8EF",
+      "dialog": "#FFFDFAF3",
+      "toast": "#FFFDFAF3",
+      "dock": "#FFFBF7EE",
+      "tabBar": "#E6FBF7EE",
+      "tabBarWeb": "#FFFBF7EE",
+      "tabPill": "#FFFFFFFF",
+      "pillThumb": "#FFFFFFFF",
+      "borderStrong": "#2E5B4C37",
+      "ring": "#124A3F2E",
+      "dateSheet": "#FFFBF7EE",
+      "cupertinoBar": "#E6FBF7EE",
+      "fieldFill": "#0F5B4C37",
+      "hover": "#0A000000",
+      "handle": "#335B4C37",
+      "alertButton": "#145B4C37",
+      "onSurfaceBorder": "#33FFFFFF",
+      "barTop": "#FF8FA88F",
+      "barBottom": "#FF728E71",
+      "barMutedTop": "#FFA9BCA9",
+      "barMutedBottom": "#FF849A85"
+    },
+    "fixed": {
+      "onImage": "#FFF5F5F7",
+      "photoSelectedLabelBg": "#99000000",
+      "photoSelectedLabelBorder": "#1FFFFFFF",
+      "photoChangeButtonBg": "#B3000000",
+      "photoChangeButtonBorder": "#29FFFFFF"
+    }
+  },
+  "typography": {
+    "family": "MeicanSans",
+    "weights": {
+      "regular": 400,
+      "semibold": 600
+    },
+    "roles": {
+      "largeTitle": {
+        "size": 38,
+        "lineHeight": 1.04,
+        "weight": 600,
+        "letterSpacing": -1.3,
+        "color": "ink"
+      },
+      "pageTitle": {
+        "size": 32,
+        "lineHeight": 1.08,
+        "weight": 600,
+        "letterSpacing": -0.9,
+        "color": "ink"
+      },
+      "sectionTitle": {
+        "size": 21,
+        "lineHeight": 1.2,
+        "weight": 600,
+        "letterSpacing": -0.4,
+        "color": "ink"
+      },
+      "headline": {
+        "size": 17,
+        "lineHeight": 1.3,
+        "weight": 600,
+        "letterSpacing": -0.2,
+        "color": "ink"
+      },
+      "body": {
+        "size": 16,
+        "lineHeight": 1.5,
+        "weight": 400,
+        "letterSpacing": 0,
+        "color": "ink"
+      },
+      "callout": {
+        "size": 15,
+        "lineHeight": 1.5,
+        "weight": 400,
+        "letterSpacing": 0,
+        "color": "secondary"
+      },
+      "footnote": {
+        "size": 13,
+        "lineHeight": 1.5,
+        "weight": 400,
+        "letterSpacing": 0,
+        "color": "secondary"
+      },
+      "caption": {
+        "size": 12,
+        "lineHeight": 1.4,
+        "weight": 500,
+        "letterSpacing": 0,
+        "color": "secondary"
+      },
+      "eyebrow": {
+        "size": 12,
+        "lineHeight": 1.2,
+        "weight": 600,
+        "letterSpacing": 0.4,
+        "color": "accentDeep"
+      },
+      "numericHero": {
+        "size": 68,
+        "lineHeight": 0.95,
+        "weight": 600,
+        "letterSpacing": -3,
+        "color": "ink",
+        "tabularFigures": true
+      },
+      "numericLarge": {
+        "size": 44,
+        "lineHeight": 1,
+        "weight": 600,
+        "letterSpacing": -1.8,
+        "color": "ink",
+        "tabularFigures": true
+      },
+      "numericCard": {
+        "size": 28,
+        "lineHeight": 1.05,
+        "weight": 600,
+        "letterSpacing": -0.9,
+        "color": "ink",
+        "tabularFigures": true
+      },
+      "numericInline": {
+        "size": 17,
+        "lineHeight": 1.2,
+        "weight": 600,
+        "letterSpacing": -0.2,
+        "color": "ink",
+        "tabularFigures": true
+      }
+    }
+  },
+  "radius": {
+    "card": 28,
+    "sheet": 36,
+    "field": 18,
+    "pill": 999,
+    "tag": 10,
+    "dialog": 40,
+    "dayCell": 18,
+    "datePickerTop": 32,
+    "smallBadgeFactor": 0.32
+  },
+  "spacing": {
+    "unit": 4,
+    "pageHorizontal": 24,
+    "secondaryBackInset": 14,
+    "pageTop": 18,
+    "cardDefault": 24,
+    "cardEmphasis": 26,
+    "rowHorizontal": 18,
+    "rowVertical": 17,
+    "sectionGap": 42,
+    "titleToFirstCard": 28,
+    "cardGroupGap": 14,
+    "controlGap": 10,
+    "groupedDividerIndent": 72,
+    "bottomContentReserve": 144
+  },
+  "stroke": {
+    "hairline": 0.7,
+    "standard": 1,
+    "focus": 1.2,
+    "chartWeight": 2.4
+  },
+  "shadow": {
+    "nativeOnly": true,
+    "card": {
+      "dark": {
+        "color": "#66000000",
+        "blur": 32,
+        "offsetX": 0,
+        "offsetY": 18
+      },
+      "light": {
+        "color": "#1A6B5A3E",
+        "blur": 26,
+        "offsetX": 0,
+        "offsetY": 14
+      }
+    },
+    "raised": {
+      "dark": {
+        "color": "#80000000",
+        "blur": 44,
+        "offsetX": 0,
+        "offsetY": 22
+      },
+      "light": {
+        "color": "#246B5A3E",
+        "blur": 40,
+        "offsetX": 0,
+        "offsetY": 20
+      }
+    },
+    "thumb": {
+      "dark": {
+        "color": "#59000000",
+        "blur": 14,
+        "offsetX": 0,
+        "offsetY": 5
+      },
+      "light": {
+        "color": "#14000000",
+        "blur": 10,
+        "offsetX": 0,
+        "offsetY": 3
+      }
+    }
+  },
+  "motion": {
+    "press": {
+      "durationMs": 170,
+      "curve": "easeOutCubic",
+      "scale": 0.97,
+      "opacity": 0.9
+    },
+    "segmentThumb": {
+      "durationMs": 300,
+      "curve": "easeOutCubic"
+    },
+    "selection": {
+      "durationMs": 240,
+      "curve": "easeOutCubic"
+    },
+    "dayCell": {
+      "durationMs": 260,
+      "curve": "easeOutCubic"
+    },
+    "tabTransition": {
+      "durationMs": 380,
+      "curve": "fastEaseInToSlowEaseOut"
+    },
+    "pageEnterMs": 440,
+    "pageExitMs": 300,
+    "dialogMs": 220,
+    "toastEnterMs": 260,
+    "toastLifetimeMs": 2200,
+    "numberCountMs": 650,
+    "weightChartMs": 900,
+    "bodyFatChartMs": 800,
+    "weeklyChartMs": 760,
+    "reducedMotion": "remove or minimize nonessential motion"
+  },
+  "components": {
+    "iconBadge": {
+      "sizes": [
+        38,
+        40,
+        42,
+        44,
+        46
+      ],
+      "radiusFactor": 0.32
+    },
+    "iconButton": {
+      "hitSize": 44,
+      "visualSize": 40,
+      "iconSize": 19
+    },
+    "primaryButton": {
+      "height": 56,
+      "radius": "pill"
+    },
+    "actionPill": {
+      "height": 58,
+      "radius": "pill"
+    },
+    "segmented": {
+      "height": 46,
+      "trackPadding": 4,
+      "thumbRadius": 19
+    },
+    "choicePill": {
+      "height": 42,
+      "horizontalPadding": 18,
+      "radius": 21
+    },
+    "tag": {
+      "horizontalPadding": 9,
+      "verticalPadding": 5,
+      "radius": 10
+    },
+    "tabBar": {
+      "height": 66,
+      "padding": 6,
+      "minimumWidth": 296,
+      "maximumWidth": 420,
+      "sideInset": 14,
+      "backdropBlur": 26,
+      "webOpaque": true
+    },
+    "sheet": {
+      "topRadius": 36,
+      "horizontalInset": 22,
+      "handleWidth": 38,
+      "handleHeight": 4,
+      "backdropBlur": 28
+    },
+    "dialog": {
+      "maximumWidth": 360,
+      "radius": 40,
+      "horizontalPadding": 22,
+      "verticalPadding": 24
+    },
+    "toast": {
+      "maximumWidth": 430,
+      "radius": 22,
+      "horizontalPadding": 16,
+      "verticalPadding": 13,
+      "topGap": 10
+    }
+  },
+  "charts": {
+    "weight": {
+      "defaultHeight": 136,
+      "goalDash": [
+        4,
+        5
+      ],
+      "lineWidth": 2.4,
+      "areaAlpha": [
+        0.2,
+        0.01
+      ],
+      "endOuterRadius": 6,
+      "endInnerRadius": 3.2
+    },
+    "bodyFat": {
+      "height": 94,
+      "lineWidth": 2.2,
+      "areaAlpha": [
+        0.16,
+        0.01
+      ]
+    },
+    "weeklyIntake": {
+      "height": 118,
+      "weekdayGap": 8,
+      "barMaxWidth": 18,
+      "barSlotFraction": 0.42,
+      "referenceDash": [
+        4,
+        5
+      ]
+    },
+    "calorieProgress": {
+      "height": 6,
+      "radius": 3
+    }
+  },
+  "platform": {
+    "contentMaxWidth": 760,
+    "pageTransitions": "horizontal native-like slide",
+    "defaultRipple": false,
+    "webShadows": false,
+    "webBackdropBlur": false,
+    "webTabBarUses": "tabBarWeb",
+    "safeAreaAware": true
+  }
+}
